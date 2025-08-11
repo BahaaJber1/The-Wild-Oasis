@@ -14,6 +14,11 @@ export function useBookings() {
     const [field, direction] = sortByRow.split("-");
     const sortBy = { field, direction };
 
+    // 3. Pagination
+    const page = !searchParams.get("page")
+        ? 1
+        : Number(searchParams.get("page"));
+
 
     // custom hook from react query we gonna provide object with 2 things
     // 1.querykey = will uniqeuly Identify the query needs to be an array
@@ -21,12 +26,12 @@ export function useBookings() {
 
     const {
         isLoading,
-        data: bookings,
+        data: { data: bookings, count } = {},
         error,
     } = useQuery({
-        queryKey: ["bookings", filter, sortBy], // to solve the problem of react query to refetch the data whenever the filter change "like a dependency"
-        queryFn: () => getBookings({ filter, sortBy }),
+        queryKey: ["bookings", filter, sortBy, page], // to solve the problem of react query to refetch the data whenever the filter change "like a dependency"
+        queryFn: () => getBookings({ filter, sortBy, page }),
     });
 
-    return { isLoading, bookings, error };
+    return { isLoading, bookings, error, count };
 }
