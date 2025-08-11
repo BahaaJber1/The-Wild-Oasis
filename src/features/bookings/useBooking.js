@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { getBooking } from "../../services/apiBookings";
 
 export function useBooking() {
-    const {bookingId} = useParams();
+    const { bookingId } = useParams();
 
     // custom hook from react query we gonna provide object with 2 things
     // 1.querykey = will uniqeuly Identify the query needs to be an array
@@ -15,7 +15,7 @@ export function useBooking() {
         data: booking,
         error,
     } = useQuery({
-        queryKey: ["booking"],
+        queryKey: ["booking", bookingId],
         queryFn: () => getBooking(bookingId),
         retry: false,
     });
