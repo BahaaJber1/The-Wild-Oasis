@@ -12,7 +12,7 @@ export function useLogin() {
         mutationFn: ({ email, password }) => loginApi({ email, password }),
         onSuccess: (user) => {
             queryClient.setQueryData(["user"], user); // allow us to set data to the cache
-            navigate("/dashboard");
+            navigate("/dashboard", { replace: true });
         },
         onError: (err) => {
             toast.error(err.message);
