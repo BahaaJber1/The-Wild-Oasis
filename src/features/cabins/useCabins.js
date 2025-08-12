@@ -7,7 +7,7 @@ export function useCabins() {
     // 2. the function that's gonna fetch the data from the api and needs to return a promise
     
     const {
-        isLoading,
+        isPending,
         data: cabins,
         error,
     } = useQuery({
@@ -15,5 +15,5 @@ export function useCabins() {
         queryFn: getCabins,
     });
 
-    return { isLoading, cabins, error };
+    return { isPending, cabins, error };
 }

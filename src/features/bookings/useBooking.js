@@ -11,7 +11,7 @@ export function useBooking() {
     // 2. the function that's gonna fetch the data from the api and needs to return a promise
 
     const {
-        isLoading,
+        isPending,
         data: booking,
         error,
     } = useQuery({
@@ -20,5 +20,5 @@ export function useBooking() {
         retry: false,
     });
 
-    return { isLoading, booking, error };
+    return { isPending, booking, error };
 }

@@ -28,7 +28,7 @@ export function useBookings() {
 
     // Query
     const {
-        isLoading,
+        isPending,
         data: { data: bookings, count } = {},
         error,
     } = useQuery({
@@ -43,12 +43,12 @@ export function useBookings() {
             queryKey: ["bookings", filter, sortBy, page + 1], // to solve the problem of react query to refetch the data whenever the filter change "like a dependency"
             queryFn: () => getBookings({ filter, sortBy, page: page + 1 }),
         })
-    
+
     if (page > pageCount)
         queryClient.prefetchQuery({
             queryKey: ["bookings", filter, sortBy, page + 1], // to solve the problem of react query to refetch the data whenever the filter change "like a dependency"
             queryFn: () => getBookings({ filter, sortBy, page: page - 1 }),
         })
 
-    return { isLoading, bookings, error, count };
+    return { isPending, bookings, error, count };
 }
