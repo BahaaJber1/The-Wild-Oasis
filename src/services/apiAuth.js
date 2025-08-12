@@ -29,6 +29,7 @@ export async function getCurrentUser() {
 
 export async function logout() {
     const { error } = await supabase.auth.signOut();
+    localStorage.removeItem("sb-jbdewevkmmiopkqgpufd-auth-token");
 
     if (error) throw new Error(error.message);
 }
