@@ -33,7 +33,7 @@ function CabinTable() {
 	// 1.querykey = will uniqeuly Identify the query needs to be an array
 	// 2. the function that's gonna fetch the data from the api and needs to return a promise
 	const {
-		isLoading,
+		isPending,
 		data: cabins,
 		error,
 	} = useQuery({
@@ -41,7 +41,7 @@ function CabinTable() {
 		queryFn: getCabins,
 	});
 
-	if (isLoading) return <Spinner />;
+	if (isPending) return <Spinner />;
 	return (
 		<Table role="table">
 			<TableHeader role="row">
