@@ -2,6 +2,9 @@
 
 A full-stack hotel management dashboard built with React, Supabase, and styled-components. This project is designed for learning and practicing modern React patterns, hooks, authentication, and real-world UI/UX for property management.
 
+<img width="1920" height="1143" alt="image" src="https://github.com/user-attachments/assets/13119297-fcf9-4e12-8bc8-0839d5bb365c" />
+
+
 ## Features
 
 - User authentication (signup, login, logout, update profile)
