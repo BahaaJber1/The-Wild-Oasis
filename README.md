@@ -4,6 +4,20 @@ A full-stack hotel management dashboard built with React, Supabase, and styled-c
 
 <img width="1920" height="1143" alt="image" src="https://github.com/user-attachments/assets/13119297-fcf9-4e12-8bc8-0839d5bb365c" />
 
+<img width="1920" height="1143" alt="image" src="https://github.com/user-attachments/assets/7181628c-b0af-4598-bc30-6a9318e973c3" />
+
+
+<img width="1920" height="1016" alt="image" src="https://github.com/user-attachments/assets/613d5c7f-3a1d-401c-9d6b-c6b6cda39ed0" />
+
+<img width="1920" height="911" alt="image" src="https://github.com/user-attachments/assets/ec0a967c-8bcb-4a8a-9ea2-df0d8dabbdfc" />
+
+<img width="1920" height="911" alt="image" src="https://github.com/user-attachments/assets/59fcadb3-44e2-481e-a1c0-e77a551c70ab" />
+
+<img width="1920" height="911" alt="image" src="https://github.com/user-attachments/assets/c677aa77-fcd4-4959-8383-5e90dbb6de90" />
+
+<img width="1920" height="911" alt="image" src="https://github.com/user-attachments/assets/294a360d-d076-4c2e-9f54-1a8c3f1091e1" />
+
+
 
 ## Features
 
