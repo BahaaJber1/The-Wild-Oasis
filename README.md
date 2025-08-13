@@ -1,12 +1,79 @@
-# React + Vite
+# The Wild Oasis
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack hotel management dashboard built with React, Supabase, and styled-components. This project is designed for learning and practicing modern React patterns, hooks, authentication, and real-world UI/UX for property management.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- User authentication (signup, login, logout, update profile)
+- Dashboard with booking stats, charts, and recent activity
+- Bookings management: view, filter, sort, check-in, check-out, delete
+- Cabin management: add, edit, duplicate, delete cabins
+- Settings: update global settings (e.g., breakfast price)
+- Responsive, modern UI with dark mode toggle
+- Pagination, filtering, and sorting for large datasets
+- File uploads for cabin images
+- Error boundaries and loading spinners
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (functional components, hooks)
+- React Router
+- React Query
+- Supabase (database, authentication, storage)
+- styled-components
+- Vite (for fast development)
+- date-fns (date utilities)
+
+## Folder Structure
+
+```
+src/
+  App.jsx
+  main.jsx
+  context/           # Context providers (e.g., DarkMode)
+  data/              # Demo data and uploads
+  features/          # Main app features (auth, bookings, cabins, dashboard, etc.)
+  hooks/             # Custom React hooks
+  pages/             # Route pages
+  services/          # API calls and Supabase client
+  styles/            # Global styles
+  ui/                # Reusable UI components
+  utils/             # Helpers and constants
+```
+
+## Getting Started
+
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/BahaaJber1/The-Wild-Oasis.git
+   cd The-Wild-Oasis
+   ```
+2. **Install dependencies:**
+   ```bash
+   yarn
+   # or
+   npm install
+   ```
+3. **Set up environment variables:**
+   - Create a `.env` file in the root with your Supabase credentials:
+     ```env
+     VITE_SUPABASE_URL=your_supabase_url
+     VITE_SUPABASE_KEY=your_supabase_key
+     ```
+4. **Start the development server:**
+   ```bash
+   yarn dev
+   # or
+   npm run dev
+   ```
+5. **Open [http://localhost:5173](http://localhost:5173) in your browser.**
+
+## Supabase Setup
+
+- Create a Supabase project and database
+- Add tables for `bookings`, `cabins`, `guests`, and configure Row Level Security (RLS)
+- Set up authentication in Supabase dashboard
+- Update `.env` with your Supabase project credentials
+
+---
+
